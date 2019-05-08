@@ -22,15 +22,6 @@ namespace ASPControlesDinamicos {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Control pnlTextBoxes.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlTextBoxes;
-        
-        /// <summary>
         /// Control btnAdd.
         /// </summary>
         /// <remarks>
@@ -40,6 +31,15 @@ namespace ASPControlesDinamicos {
         protected global::System.Web.UI.WebControls.Button btnAdd;
         
         /// <summary>
+        /// Control btnAddButton.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAddButton;
+        
+        /// <summary>
         /// Control btnGet.
         /// </summary>
         /// <remarks>
@@ -47,5 +47,32 @@ namespace ASPControlesDinamicos {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnGet;
+        
+        /// <summary>
+        /// Control lblResulado.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblResulado;
+        
+        /// <summary>
+        /// Control pnlTextBoxes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlTextBoxes;
+        
+        /// <summary>
+        /// Control pnlButton.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlButton;
     }
 }
