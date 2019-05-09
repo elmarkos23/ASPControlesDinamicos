@@ -16,14 +16,25 @@
             <div class="jumbotron">
                 <h1 class="display-3">Controles Dinamicos</h1>
                 <p class="lead">
+                    
+                    <asp:TextBox runat="server" ID="txtNombre" CssClass="form-control" />
+                    <asp:TextBox runat="server" ID="txtDescripcion" CssClass="form-control" />
+                    <asp:DropDownList runat="server">
+                        <asp:ListItem>texto</asp:ListItem>
+                        <asp:ListItem>Etiqueta</asp:ListItem>
+                        <asp:ListItem>Check</asp:ListItem>
+                    </asp:DropDownList>
+                    <asp:Button runat="server" Text="Agregar" ID="Click" CssClass="btn btn-primary"/>
+                    
+
                     <asp:Button ID="btnAdd" runat="server" Text="Add Text" OnClick="btnAdd_Click" CssClass="btn btn-success" />
                     <asp:Button ID="btnAddButton" runat="server" Text="Add Button" OnClick="btnAddButton_Click" CssClass="btn btn-success" />
                     <asp:Button ID="btnGet" runat="server" Text="Get Text" OnClick="btnGet_Click" CssClass="btn btn-primary" />
                 </p>
                 <asp:Label ID="lblResulado" runat="server" />
                 <hr />
-                <asp:Panel ID="pnlTextBoxes" runat="server" CssClass="row" />
-                <asp:Panel ID="pnlButton" runat="server" CssClass="row" />
+                <asp:Panel ID="pnlTextBoxes" runat="server" CssClass="row" GroupingText="Textos" />
+                <asp:Panel ID="pnlButton" runat="server" CssClass="row"  GroupingText="Botones"/>
             </div>
         </div>
         <hr />

@@ -15,19 +15,19 @@ namespace ASPControlesDinamicos
         }
         protected void Page_PreInit(object sender, EventArgs e)
         {
-            List<string> keys = Request.Form.AllKeys.Where(key => key.Contains("txtDynamic")).ToList();
+            List<string> keytxt = Request.Form.AllKeys.Where(key => key.Contains("Dynamic")).ToList();
             int i = 1;
-            foreach (string key in keys)
+            foreach (string key in keytxt)
             {
-                this.CreateTextBox("txtDynamic" + i);
+                this.CreateTextBox("Dynamic" + i);
                 i++;
             }
 
 
 
-            List<string> butt = Request.Form.AllKeys.Where(key => key.Contains("btnDynamic")).ToList();
+            List<string> keybtn = Request.Form.AllKeys.Where(key => key.Contains("btnDynamic")).ToList();
             int j = 1;
-            foreach (string key in keys)
+            foreach (string key in keybtn)
             {
                 this.CreateButton("btnDynamic" + j);
                 j++;
@@ -44,8 +44,9 @@ namespace ASPControlesDinamicos
         {
             TextBox txt = new TextBox();
             txt.ID = id;
+            txt.Text = "0";
             txt.CssClass = "form-control col-sm-3";
-            
+            txt.TextMode = TextBoxMode.Number;
             pnlTextBoxes.Controls.Add(txt);
 
             Literal lt = new Literal();
@@ -54,12 +55,12 @@ namespace ASPControlesDinamicos
         }
         protected void btnGet_Click(object sender, EventArgs e)
         {
-            string message = "";
+            int message = 0;
             foreach (TextBox textBox in pnlTextBoxes.Controls.OfType<TextBox>())
             {
-                message += textBox.ID + ": " + textBox.Text + "\\n";
+                message += Convert.ToInt32(textBox.Text);
             }
-            lblResulado.Text = message;
+            lblResulado.Text ="Resultado: " + message.ToString();
             //ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "alert('" + message + "');", true);
         }
 
@@ -70,12 +71,12 @@ namespace ASPControlesDinamicos
         }
         private void CreateButton(string id)
         {
-            Button txt = new Button();
-            txt.ID = id;
-            txt.Text = "Button "+id.ToString();
-            txt.CssClass = "btn btn-primary col-sm-3";
+            Button btn = new Button();
+            btn.ID = id;
+            btn.Text = id;
+            btn.CssClass = "btn btn-primary col-sm-3";
 
-            pnlButton.Controls.Add(txt);
+            pnlButton.Controls.Add(btn);
 
             Literal lt = new Literal();
             lt.Text = "<br />";
